@@ -1,9 +1,12 @@
 #ifndef SHADER_H
 #define SHADER_H
 
-#include <cglm/cglm.h>
+// 3rd Party Libraries
+#include <glad2/gl.h>
+#include <cglm/types.h>
+
+// Standard Libraries
 #include <stdio.h>
-#include <glad/glad.h>
 
 typedef unsigned int Shader;
 
