@@ -16,10 +16,7 @@ add_compile_options(-Wall -Wextra -Wpedantic -O3)
 
 # Include directories for header files
 include_directories(${PROJECT_SOURCE_DIR}/include)
-include_directories(${PROJECT_SOURCE_DIR}/submodules/cglm/include)
 
-add_library( ${PROJECT_NAME} ${PROJECT_SOURCE_DIR}/src/shader.c ${PROJECT_SOURCE_DIR}/src/glad.c )
+add_library( ${PROJECT_NAME} ${PROJECT_SOURCE_DIR}/src/shader.c )
 
-target_link_libraries( ${PROJECT_NAME} PRIVATE m cglm_headers )
-
-add_subdirectory(${PROJECT_SOURCE_DIR}/submodules/cglm EXCLUDE_FROM_ALL)
+target_link_libraries( ${PROJECT_NAME} PRIVATE m )
